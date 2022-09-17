@@ -7,7 +7,7 @@
 let preco = 1500;
 let parcelas = 12;
 if (parcelas == 1) {
-    let desconto = 1500 / 100 * 2.5;
+    let desconto = preco * 2.5 / 100;
     console.log(`O pagamento a vista, com desconto de 2,5%. Fica ${(preco - desconto).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
 }
 else if (parcelas >= 2 && parcelas <= 5) {
@@ -15,13 +15,13 @@ else if (parcelas >= 2 && parcelas <= 5) {
     console.log(`Cada parcela vai sair no valor de ${(preco / parcelas).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
 }
 else if (parcelas >= 6 && parcelas <= 10) {
-    let acrescimo = 1500 / 100 * 6;
+    let acrescimo = preco * 6 / 100;
     console.log(`O pagamento a vista, com acrescimo de 6%. Fica ${(preco + acrescimo).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
     console.log(`Cada parcela vai sair no valor de ${((preco + acrescimo) / parcelas).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
 }
 else if (parcelas >= 11 && parcelas <= 15) {
-    let acrescimo = 1500 / 100 * 15;
-    console.log(`O pagamento a vista, com acrescimo de 15%. Fica ${(preco + acrescimo).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
+    let acrescimo = preco * 13 / 100;
+    console.log(`O pagamento a vista, com acrescimo de 13%. Fica ${(preco + acrescimo).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
     console.log(`Cada parcela vai sair no valor de ${((preco + acrescimo) / parcelas).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}`);
 }
 else {
